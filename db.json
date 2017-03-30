@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "usuarios":[ {
+    "id": 1,
+    "email": "luisheumann@gmail.com",
+    "password": "12345"
+  },{"id": 2,
+    "email": "admin@gmail.com",
+    "password": "54321"
+  }]
+}
