@@ -15,6 +15,10 @@ export class AppComponent {
   onClick () {
     this.router.navigate(['/component-two', 456]);
   }
+
+   Nuevo () {
+    this.router.navigate(['/nuevo']);
+  }
 }
 
 /*

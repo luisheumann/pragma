@@ -15,7 +15,7 @@ export class loginComponent implements OnInit{
 	submitted: boolean = false;
 	unauthorized: boolean = false;
 friends: any;
-  people: Object[];
+people: Object[];
 user: any;
 datausuario: any;
 	constructor( private userService: FriendService, private http: Http, private formBuilder: FormBuilder, private router: Router) {

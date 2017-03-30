@@ -16,6 +16,7 @@ export class FriendService {
   }
  data: Object;
  foods: any;
+ id: any;
 	getFriends() {
       return this.http
 			.get('../people.json')
@@ -86,6 +87,18 @@ export class FriendService {
 			});
 
 	}
+
+			detalle(user) : Promise<any> {
+		
+			return this.http
+			.get('http://localhost:3000/comics?id='+user)
+			.toPromise()
+			.then(res => {
+				return res.json()
+			});
+
+	}
+
 
 
 

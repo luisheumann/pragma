@@ -11,6 +11,7 @@ import { dataComponent } from './views/data/data.component';
 import { usuarioComponent } from './views/usuario/usuario.component';
 import { comicComponent } from './views/comic/comic.component';
 import { scomicComponent } from './views/comic/scomic.component';
+import { detalleComponent } from './views/comic/detalle.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -19,7 +20,7 @@ export const routes: Routes = [
   { path: 'usuario', component: usuarioComponent },
   { path: 'comic', component: comicComponent },
   { path: 'comic/show', component: scomicComponent },
-  { path: 'component-two/:id', component: ComponentOne }
+  { path: 'comic/show/:id', component: detalleComponent }
 ];
 
 export const appRoutingProviders: any[] = [

@@ -11,6 +11,8 @@ import {LoginModule} from "./views/login/login.module";
 import {UsuarioModule} from "./views/usuario/usuario.module";
 import {ComicModule} from "./views/comic/comic.module";
 import {ScomicModule} from "./views/comic/scomic.module";
+import {DetalleModule} from "./views/comic/detalle.module";
+
 import {DataModule} from "./views/data/data.module";
 
 import { routing, appRoutingProviders } from './app.routes';
@@ -20,7 +22,8 @@ import ComponentOne from './component-one';
 
 
 import { FriendService } from './services/user.service';
-import { WikipediaService } from './views/comic/wikipedia.service';
+
+import {WebStorageModule, LocalStorageService} from "angular2-localstorage";
 
 
 @NgModule({
@@ -38,10 +41,11 @@ import { WikipediaService } from './views/comic/wikipedia.service';
     UsuarioModule,
     ComicModule,
     ScomicModule,
-    JsonpModule
+    JsonpModule,
+    DetalleModule
   ],
  providers: [
-    appRoutingProviders,FriendService,WikipediaService
+    appRoutingProviders,FriendService
   ],
   bootstrap: [ AppComponent ]
 })

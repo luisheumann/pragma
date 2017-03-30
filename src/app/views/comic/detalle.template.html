@@ -1,0 +1,97 @@
+
+<style type="text/css">
+	.comic.titulo {
+    padding: 10px;
+    border: #673AB7 1px solid;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Arial;
+    width: 100%;
+    margin: 10px;
+    float: left;
+}
+
+button.btn-buscar {
+    width: 30%;
+    padding: 15px;
+    font-family: Arial;
+}
+
+input.input-buscar {
+    width: 50%;
+    margin-left: 10px;
+    font-family: Arial;
+}
+
+
+.box.comics {
+    margin: auto;
+    display: table;
+     width: 280px;
+     font-family: Arial;
+}
+
+.comic.descripcion {
+    width: 100%;
+    padding: 10px;
+    font-family: Arial;
+}
+
+.comic.labe-comentarios {
+    width: 100%;
+    background-color: #3F51B5;
+    color: #FFF;
+    padding: 10px;
+    font-family: arial;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: Arial;
+}
+
+.comic.comentario {
+    padding: 10px;
+    background-color: #e7ebff;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: Arial;
+    margin-top: 25px;
+}
+
+.comic.labe-descripcion {
+    padding: 10px;
+    background-color: #E91E63;
+    display: table;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #fff;
+    font-family: Arial;
+
+}
+
+@media (max-width: 767px) {
+
+
+.box.comics[_ngcontent-c1] {
+     margin: 0px !important;
+    display: table;
+    width: 90% !important;
+    font-family: Arial;
+}
+
+	}
+</style>
+
+<div class="contenedor">
+ <div class="box comics" *ngFor="let data of datacomics ">
+                                <div class="comic titulo">{{data.titulo}}</div>
+                                <div class="comic labe-descripcion">Descripcion</div>
+                                <div class="comic descripcion">{{data.descripcion}}</div>
+                                <div class="comic labe-comentarios">Comentarios</div>
+                                <div class="comic comentario">{{data.comentario}}</div>
+                        
+                            </div>
+</div>
+

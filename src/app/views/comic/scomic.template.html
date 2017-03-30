@@ -8,6 +8,7 @@
     font-family: Arial;
     width: 150px;
     margin: 10px;
+    float: left;
 }
 
 button.btn-buscar {
@@ -23,14 +24,14 @@ input.input-buscar {
 </style>
 
 
-<div> <input type="text" class="input-buscar" id="buscar"   placeholder="buscar" name="buscar" ><button  class="btn-buscar"  type="submit" >+ Nuevo</button></div>
+<div> <input type="text" class="input-buscar" id="buscar"   placeholder="buscar" name="buscar" (keyup)="buscar(mymodel=$event.target.value)" ><button  class="btn-buscar"  type="submit" (click)="Nuevo()" >+ Nuevo</button></div>
 
- <div class="box comics" *ngFor="let data of datacomics">
-                                <div class="comic titulo">{{data.titulo}}</div>
-                              <!--  <div class="comic descripcion">{{data.descripcion}}</div>
-                                <div class="comic comentario">{{data.comentario}}</div>-->
-                        
+
+
+
+ <div class="box comics" *ngFor="let data of datacomics ">
+                              <a href="comic/show/{{data.id}}">  <div class="comic titulo">{{data.titulo}}</div></a>
+              
                             </div>
-
 
 

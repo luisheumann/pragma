@@ -53,6 +53,11 @@
     background-color: #4cd5e6;
 }
 
+.form.comic {
+    margin-top: 20px;
+}
+
+
 
 	@media (max-width: 767px) {
 

@@ -1,19 +1,19 @@
 import { Component,OnInit,Pipe, PipeTransform,ChangeDetectionStrategy,EventEmitter } from '@angular/core';
-import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators }  from '@angular/forms';
 import {Http, Response, RequestOptions, Headers} from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 import { FriendService } from '../../services/user.service';
 import 'rxjs/add/operator/map';
+import { Router, ActivatedRoute } from '@angular/router';
 
 
 
 @Component({
-	selector: 'scomic',
-	templateUrl: 'scomic.template.html',
+	selector: 'detalle',
+	templateUrl: 'detalle.template.html',
 
 	})
-export class scomicComponent implements OnInit { 
+export class detalleComponent implements OnInit { 
 
 	form: FormGroup;
 	submitted: boolean = false;
@@ -24,21 +24,31 @@ export class scomicComponent implements OnInit {
 	datacomics: any;
 	checkpwdStrength: any;
 	private search: string;
+	private sub: any;
+	id: any;
 
 
-   constructor( private userService: FriendService, private http: Http, private formBuilder: FormBuilder, private router: Router) {
+   constructor( private route: ActivatedRoute, private userService: FriendService, private http: Http, private formBuilder: FormBuilder, private router: Router) {
 
 
    }
 
    ngOnInit() {
+
+    this.sub = this.route.params.subscribe(params => {
+       this.id = +params['id']; // (+) converts string 'id' to a number
+
+      console.log(this.id)
+    });
+
+
    	this.form = this.formBuilder.group({
    		titulo: ['', Validators.required],
    		descripcion: ['', Validators.required],
    		comentario: ['', Validators.required]
   		});
 
-  	this.userService.comicshow().then(datacomics => {
+  	this.userService.detalle(this.id).then(datacomics => {
   		this.datacomics = datacomics
   		
   		});
