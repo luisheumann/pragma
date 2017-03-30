@@ -1,0 +1,41 @@
+
+<div class="contenedor">
+	<div class="form">
+		<form class="m-t" [formGroup]="form" (ngSubmit)="create()" >
+			<div class="label-form">Nombre</div>
+			<div class="input-form"><input type="text" formControlName="nombre" class="form-control"  placeholder="nombre" name="nombre" ngModel ></div>
+			<div class="label-form">Pais</div>
+			<div class="input-form"><input type="text"  formControlName="pais" class="form-control"  placeholder="pais" name="pais" ngModel ></div>
+
+			<div class="label-form">Email</div>
+			<div class="input-form"><input type="text"  formControlName="email" class="form-control"  placeholder="email" name="email" ngModel></div>
+			<div>
+				<div class="label-form">Password</div>
+				<div class= "input-form"><input type="text"  formControlName="password" class="form-control"  placeholder="password" name="password" required    ngModel></div>
+
+	     
+
+			</div>
+<!--
+ <div *ngIf="form.controls.password.errors && form.controls.password.dirty ">
+       <small class="up"><strong><i>Password Must Contain(4-20) 1-char! 1-number!</i></strong></small></div>
+
+-->
+			 <div class="alerta password" *ngIf="!form.controls['password'].valid && form.controls['password'].touched">
+
+			 <b>○ Mínimo una mayúscula.</b><br>
+
+			 <b>○ Mínimo 2 números.</b><br>
+
+			 <b>○ Mínimo un carácter especial.</b><br>
+
+			 <b>○ Una longitud mínima de 8 caracteres.</b><br></div>
+      	
+			<button  class="submit-form"  type="submit" >Registrar</button>
+			
+
+			     
+
+		</form>
+	</div>
+</div><!--/contendor-->

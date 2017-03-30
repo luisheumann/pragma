@@ -1,0 +1,23 @@
+
+<div class="contenedor">
+	<div class="form comic">
+		<form class="form-comic" [formGroup]="form" (ngSubmit)="create()" >
+			<div class="label-form">Titulo</div>
+			<div class="input-form"><input type="text" formControlName="titulo" class="form-control"  placeholder="titulo" name="titulo" ngModel ></div>
+			<div class="label-form">Descripcion</div>
+			<div class="input-form"><input type="text"  formControlName="descripcion" class="form-control"  placeholder="descripcion" name="descripcion" ngModel ></div>
+
+			<div class="label-form">Comentario</div>
+			<div class="input-form"><input type="text"  formControlName="comentario" class="form-control"  placeholder="comentario" name="comentario" ngModel></div>
+			<div>
+	
+			</div>
+
+			<button  class="submit-form"  type="submit" >Guardar</button>
+			
+
+			     
+
+		</form>
+	</div>
+</div><!--/contendor-->

@@ -1,0 +1,36 @@
+
+<style type="text/css">
+	.comic.titulo {
+    padding: 15px;
+    border: #673AB7 1px solid;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Arial;
+    width: 150px;
+    margin: 10px;
+}
+
+button.btn-buscar {
+    width: 30%;
+    padding: 15px;
+}
+
+input.input-buscar {
+    width: 50%;
+    margin-left: 10px;
+}
+
+</style>
+
+
+<div> <input type="text" class="input-buscar" id="buscar"   placeholder="buscar" name="buscar" ><button  class="btn-buscar"  type="submit" >+ Nuevo</button></div>
+
+ <div class="box comics" *ngFor="let data of datacomics">
+                                <div class="comic titulo">{{data.titulo}}</div>
+                              <!--  <div class="comic descripcion">{{data.descripcion}}</div>
+                                <div class="comic comentario">{{data.comentario}}</div>-->
+                        
+                            </div>
+
+
+

@@ -49,6 +49,11 @@
 		
 	}
 
+	.form.comic {
+    background-color: #4cd5e6;
+}
+
+
 	@media (max-width: 767px) {
 
 		.contenedor{

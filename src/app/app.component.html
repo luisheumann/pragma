@@ -1,2 +1,52 @@
-<!-- Main view/routes wrapper-->
-<router-outlet></router-outlet>
+    
+<style type="text/css">
+	nav.nav.top {
+   height: 42px;
+    background-color: #FF5722;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: arial;
+    padding-top: 15px;
+    padding-left: 10px;
+
+} 
+
+nav.nav.top a{
+	color: #FFF;
+	text-decoration: none; 
+	text-transform: 
+	font-family: arial;
+}
+
+button.btn-logout {
+   background-color: #03A9F4;
+    color: #FFF;
+    border: none;
+    float: right;
+    padding: 23px;
+    font-family: arial;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+
+}
+
+a.nav.item {
+    margin-right: 25px;
+
+}
+
+</style>
+    <nav class="nav top">
+      <a class="nav item" [routerLink]="['/comic/show']">Lista Comics</a>
+      <a class="nav item" [routerLink]="['/comic']">+ Nuevo</a>
+       <button class="btn-logout" (click)="onClick()">Logout</button>
+    </nav>
+    
+  
+ 
+    <div>
+      <router-outlet></router-outlet>
+    </div>

@@ -1,13 +1,24 @@
-<div class="middle-box text-center loginscreen  animated fadeInDown">
 
+<div class="contenedor">
+	<div class="form">
+		<form class="m-t" [formGroup]="form" (ngSubmit)="login()" >
+			
 
+			<div class="label-form">Email</div>
+			<div class="input-form"><input type="text"  formControlName="email" class="form-control"  placeholder="email" name="email" ngModel></div>
+			<div>
+				<div class="label-form">Password</div>
+				<div class= "input-form"><input type="text"  formControlName="password" class="form-control"  placeholder="password" name="password" required    ngModel></div>
 
+	     
 
- 		 <tr *ngFor="let data of datausuario">
-                                <td>{{data.email}}</td>
-                                <td>{{data.password}}</td>
-                           
-                            </tr>
+			</div>
 
+			<button  class="submit-form"  type="submit" >Entrar</button>
+			
 
-</div>
+			     
+
+		</form>
+	</div>
+</div><!--/contendor-->

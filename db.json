@@ -1,24 +1,31 @@
 {
-  "posts": [
+  "comics": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "titulo": "BATMAN",
+      "descripcion": "Super heroe",
+      "comentario": "Millonario"
+    },
+    {
+      "titulo": "Superman",
+      "descripcion": "Here espacio",
+      "comentario": "Crytonita",
+      "id": 2
+    },
+    {
+      "titulo": "Batichica",
+      "descripcion": "mujer",
+      "comentario": "54 anos",
+      "id": 3
     }
   ],
-  "comments": [
+  "usuarios": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "nombre": "luis",
+      "pais": "colombia",
+      "email": "luisheumann@gmail.com",
+      "password": "12345"
     }
-  ],
-  "usuarios":[ {
-    "id": 1,
-    "email": "luisheumann@gmail.com",
-    "password": "12345"
-  },{"id": 2,
-    "email": "admin@gmail.com",
-    "password": "54321"
-  }]
+  ]
 }

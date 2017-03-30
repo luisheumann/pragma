@@ -34,6 +34,62 @@ export class FriendService {
 
 	}
 
+		create(user: User) : Promise<any> {
+			return this.http
+			.post('http://localhost:3000/usuarios', user)
+			.toPromise()
+			.then(res => {
+				return res.json()
+			});
+
+	}
+
+		login(user: User) : Promise<any> {
+		
+			return this.http
+			.get('http://localhost:3000/usuarios?email='+user.email+'&password='+user.password)
+			.toPromise()
+			.then(res => {
+				return res.json()
+			});
+
+	}
+
+			comiccreate(user: User) : Promise<any> {
+			return this.http
+			.post('http://localhost:3000/comics', user)
+			.toPromise()
+			.then(res => {
+				return res.json()
+			});
+
+	}
+
+
+		comicshow() : Promise<any> {
+			return this.http
+			.get('http://localhost:3000/comics')
+			.toPromise()
+			.then(res => {
+				return res.json()
+			});
+
+	}
+
+		buscar(user) : Promise<any> {
+		
+			return this.http
+			.get('http://localhost:3000/comics?titulo='+user)
+			.toPromise()
+			.then(res => {
+				return res.json()
+			});
+
+	}
+
+
+
+
 
 
 

@@ -40,7 +40,7 @@ datausuario: any;
 
 		this.userService.show().then(datausuario => {
 			this.datausuario = datausuario
-			console.log(this.datausuario)
+		
 		});
 
 
@@ -50,18 +50,24 @@ datausuario: any;
 
 	login() {
 		this.submitted = true;
-		/*if(this.form.valid) {
+		if(this.form.valid) {
 		this.userService.login(this.form.value).then(user => {
 				
-				
+				console.log(user)
+				if (Object.keys(user).length === 0) {
+					
+					console.log("usuario o password no existe")
+				}else{
+					console.log("puede entrar")
+				}
 
-					this.router.navigateByUrl('cliente');
+					//this.router.navigateByUrl('cliente');
 
 				}).catch(res => {
 					console.log("Error de usuario o contraseña")
 					this.unauthorized = true;
 					});
 
-			}*/
+			}
 			}
 		}
