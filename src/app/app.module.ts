@@ -23,7 +23,7 @@ import ComponentOne from './component-one';
 
 import { FriendService } from './services/user.service';
 
-import {WebStorageModule, LocalStorageService} from "angular2-localstorage";
+
 
 
 @NgModule({

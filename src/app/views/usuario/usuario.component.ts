@@ -5,6 +5,9 @@ import {Http, Response, RequestOptions, Headers} from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 import { FriendService } from '../../services/user.service';
 import 'rxjs/add/operator/map';
+import {CustomValidators} from '../CustomValidators';
+
+
 @Component({
 	selector: 'usuario',
 	templateUrl: 'usuario.template.html'

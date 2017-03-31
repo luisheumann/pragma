@@ -48,6 +48,7 @@ datausuario: any;
 
 
 
+
 	login() {
 		this.submitted = true;
 		if(this.form.valid) {
@@ -61,6 +62,7 @@ datausuario: any;
 					console.log("puede entrar")
 				}
 
+      localStorage.setItem('id_token', 'papi');
 					//this.router.navigateByUrl('cliente');
 
 				}).catch(res => {
