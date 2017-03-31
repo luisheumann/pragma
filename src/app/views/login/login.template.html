@@ -14,12 +14,28 @@
 		<form class="" [formGroup]="form" (ngSubmit)="login()" >
 
 			<div class="label-form">Email</div>
-			<div class="input-form"><input type="text"  formControlName="email"   placeholder="email" name="email" ngModel></div>
-			<div>
-				<div class="label-form">Password</div>
-				<div class= "input-form"><input type="text"  formControlName="password"   placeholder="password" name="password" required    ngModel></div>
+				<div class="input-form"><input type="text" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"   formControlName="email"   placeholder="email" name="email" ngModel></div>
 
-			</div>
+
+			<div class="alerta email" *ngIf="!form.controls['email'].valid && form.controls['email'].touched">
+
+				EMAIL Invalido</div>
+			
+				<div>
+					<div class="label-form">Password</div>
+					<div class= "input-form"><input type="text"  pattern="^(?=(.*[a-z]){1,})(?=(.*[\d]){2,})(?=(.*[\W]){1,})(?!.*\s).{8,}$" formControlName="password"   placeholder="password" name="password" required    ngModel></div>
+
+				</div>
+
+				<div class="alerta password" *ngIf="!form.controls['password'].valid && form.controls['password'].touched">
+		
+					○ Mínimo una mayúscula.<br>
+
+					○ Mínimo 2 números.<br>
+
+					○ Mínimo un carácter especial.<br>
+
+					○ Una longitud mínima de 8 caracteres.<br></div>
 			<button  class="submit-form"  type="submit" >Entrar</button>
 
 		</form>
