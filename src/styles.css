@@ -61,6 +61,42 @@
     margin-top: 20px;
 }
 
+.alerta {
+    background-color: red;
+    color: #fff;
+    padding: 10px;
+    font-family: arial;
+    margin-bottom: 10px;
+}
+
+.crear-usuario {
+    text-align: center;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.form.create-user {
+    background-color: #00BCD4;
+    margin-top: 10px;
+}
+
+.crear-usuario  a{
+    
+    color: #fff;
+
+}
+
+.crear-usuario a {
+    color: #fff;
+    text-decoration: none;
+    font-family: arial;
+    font-size: 12px;
+    
+}
+
 
 	@media (max-width: 767px) {
 

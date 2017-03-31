@@ -9,7 +9,7 @@ import 'rxjs/add/operator/map';
 // Decorator to tell Angular that this class can be injected as a service to another class
 
 @Injectable()
-export class FriendService { 
+export class UserService { 
   constructor(private http:Http) {
   
  

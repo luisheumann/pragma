@@ -39,13 +39,12 @@ a.nav.item {
 }
 
 </style>
-    <nav class="nav top">
+
+      <nav class="nav top">
       <a class="nav item" [routerLink]="['/comic/show']">Lista Comics</a>
-      <a class="nav item" [routerLink]="['/comic']">+ Nuevo</a>
-       <button class="btn-logout" (click)="onClick()">Logout</button>
+      <a class="nav item" [routerLink]="['/comic']"> + Comic</a>
+      <a class="nav item" [routerLink]="['/usuario']">+ Usuario</a>
     </nav>
-    
-  
  
     <div>
       <router-outlet></router-outlet>

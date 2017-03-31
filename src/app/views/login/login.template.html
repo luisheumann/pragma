@@ -1,8 +1,17 @@
-
+<style type="text/css">
+	.bar {
+    width: 100%;
+    background-color: #fff;
+    height: 70px;
+    position: fixed;
+    z-index: 1000000;
+    top: 0px;
+}
+</style>
+<div class="bar"> </div>
 <div class="contenedor">
 	<div class="form login">
 		<form class="" [formGroup]="form" (ngSubmit)="login()" >
-			
 
 			<div class="label-form">Email</div>
 			<div class="input-form"><input type="text"  formControlName="email"   placeholder="email" name="email" ngModel></div>
@@ -11,12 +20,14 @@
 				<div class= "input-form"><input type="text"  formControlName="password"   placeholder="password" name="password" required    ngModel></div>
 
 			</div>
-
 			<button  class="submit-form"  type="submit" >Entrar</button>
-			
-
-			     
 
 		</form>
+		<div class="crear-usuario"> <a href="/usuario">Crear usuario</a></div>
+			<small>
+Email:  luisheumann@gmail.com  -
+Password: TA3chmedi4$</small>
 	</div>
+
 </div><!--/contendor-->
+

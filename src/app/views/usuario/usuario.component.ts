@@ -1,11 +1,15 @@
+///////////////////////////////
+///By: LUIS HEUMANN
+///Email: luisheumann@gmail.com
+///////////////////////////////
 import { Component,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators }  from '@angular/forms';
 import {Http, Response, RequestOptions, Headers} from '@angular/http';
 import 'rxjs/add/operator/toPromise';
-import { FriendService } from '../../services/user.service';
+import { UserService } from '../../services/user.service';
 import 'rxjs/add/operator/map';
-import {CustomValidators} from '../CustomValidators';
+
 
 
 @Component({
@@ -23,11 +27,7 @@ user: any;
 datausuario: any;
 checkpwdStrength: any;
 
- //var strongRegularExp = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
-   //   var mediumRegularExp = new RegExp("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})");
-passwordRegex: any = '((?=.*\d)(?=.*[a-zA-Z]).{4,20})' ;
-	constructor( private userService: FriendService, private http: Http, private formBuilder: FormBuilder, private router: Router) {
-
+	constructor( private userService: UserService, private http: Http, private formBuilder: FormBuilder, private router: Router) {
 
   }
 
@@ -36,23 +36,17 @@ passwordRegex: any = '((?=.*\d)(?=.*[a-zA-Z]).{4,20})' ;
   		nombre: ['', Validators.required],
   		pais: ['', Validators.required],
   		email: ['', Validators.required],
-  		password: ['', Validators.compose([Validators.required, Validators.minLength(5), Validators.maxLength(10)])]
+  		password: ['', Validators.required]
   		});
 
   	this.userService.show().then(datausuario => {
   		this.datausuario = datausuario
   		console.log(this.datausuario)
   		});
-
-
-      
-
   }
 
-
-
   create() {
-  	//this.submitted = true;
+ 
   	if(this.form.valid) {
   		this.userService.create(this.form.value).then(user => {
 

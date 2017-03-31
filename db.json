@@ -2,18 +2,18 @@
   "comics": [
     {
       "id": 1,
-      "titulo": "BATMAN",
+      "titulo": "batman",
       "descripcion": "Super heroe",
       "comentario": "Millonario"
     },
     {
-      "titulo": "Superman",
+      "titulo": "superman",
       "descripcion": "Here espacio",
       "comentario": "Crytonita",
       "id": 2
     },
     {
-      "titulo": "Batichica",
+      "titulo": "batichica",
       "descripcion": "mujer",
       "comentario": "54 anos",
       "id": 3
@@ -24,6 +24,8 @@
       "comentario": "50 temporadas",
       "id": 4
     }
+ 
+    
   ],
   "usuarios": [
     {
@@ -31,7 +33,8 @@
       "nombre": "luis",
       "pais": "colombia",
       "email": "luisheumann@gmail.com",
-      "password": "12345"
+      "password": "TA3chmedi4$"
     }
+    
   ]
 }

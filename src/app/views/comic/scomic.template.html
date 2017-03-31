@@ -21,17 +21,35 @@ input.input-buscar {
     margin-left: 10px;
 }
 
+.lista-comic {
+    display: inline-table;
+}
+.cargarmas {
+    padding: 10px;
+    background-color: burlywood;
+    color: #fff;
+    font-family: arial;
+}
+        nav.nav.top {
+    display: block !important;
+}
 </style>
 
+<div> <input type="text" class="input-buscar" id="buscar"    placeholder="buscar" name="buscar" (keyup)="buscar(mymodel=$event.target.value)" ><button  class="btn-buscar"  type="submit" (click)="Nuevo()" >+ Nuevo</button></div>
+<div>
 
-<div> <input type="text" class="input-buscar" id="buscar"   placeholder="buscar" name="buscar" (keyup)="buscar(mymodel=$event.target.value)" ><button  class="btn-buscar"  type="submit" (click)="Nuevo()" >+ Nuevo</button></div>
+    <div class="lista-comic" *ngFor="let item of pagedItems">    <a href="comic/show/{{item.id}}">  <div class="comic titulo">{{item.titulo}}</div></a></div>
 
+    <!-- pager -->
+    <div class="paginacion">
+        <div *ngIf="pager.pages && pager.pages.length" class="pagination">
 
+            <div *ngIf="pagina" class="cargarmas" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                <a (click)="setPage(pager.currentPage + 1)">Cargar Mas</a>
+            </div>
 
-
- <div class="box comics" *ngFor="let data of datacomics ">
-                              <a href="comic/show/{{data.id}}">  <div class="comic titulo">{{data.titulo}}</div></a>
-              
-                            </div>
+        </div>
+    </div>
+</div>
 
 
